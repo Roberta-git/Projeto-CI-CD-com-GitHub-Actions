@@ -23,5 +23,15 @@ git clone https://github.com/seu-usuario/hello-app.git
 cd hello-app
 ```
 
+### Passo 2
+
+1. No VS Code, dentro da pasta `hello-app`, crie o ambiente e instale o FastAPI e o Uvicorn para a plicação.
+
+```
+python3 -m venv venv
+source venv/bin/activate  # para Linux ou Mac
+venv\Scripts\activate     # para Windows
+pip install fastapi uvicorn
+```
 
 
