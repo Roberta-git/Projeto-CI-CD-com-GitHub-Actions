@@ -14,7 +14,7 @@ execução de uma aplicação FastAPI, usando o GitHub Actions e outros serviço
 
 ## Etapa 1: Criar aplicação FastAPI
 
-### Passo 1
+#### Passo 1
 
 1. Crie um repositório público no GitHub como o nome `hello-app`, sem adicionar README.
 2. No terminal execute:
@@ -23,7 +23,7 @@ git clone https://github.com/seu-usuario/hello-app.git
 cd hello-app
 ```
 
-### Passo 2
+#### Passo 2
 
 1. Dentro da pasta `hello-app`, no VSCode, crie um ambiente e instale o FastAPI e o Uvicorn para a aplicação.
 
@@ -39,7 +39,7 @@ pip install fastapi uvicorn
 pip freeze > requirements.txt
 ```
 
-### Passo 3
+#### Passo 3
 
 1. Crie um arquivo `main.py` com o conteúdo:
 ```
@@ -60,7 +60,7 @@ uvicorn main:app --host 0.0.0.0 --port 8080
 3. Abra o navegador  http://localhost:8080 e verifique se aparece a mensagem `{"message": "Hello World"}`.
 
 
-### Passo 4
+#### Passo 4
 
 1. Para conteinerizar a aplicação, será preciso criar uma imagem Docker. Para isso, crie um arquivo chamado `Dockerfile` e inclua nele:
 ```
@@ -111,9 +111,9 @@ git push -u origin main
 Confira no GITHUb, se os arquivos pareceram.
 
 
-Etapa 2 – Criar o GitHub Actions (CI/CD) 
+## Etapa 2 – Criar o GitHub Actions (CI/CD) 
 
-### Passo 1
+#### Passo 1
 
 1. Crie o workflow do GitHub Actions.
 2. No VSCode, na raiz de `hello-app`, gere a pasta  `.github ` e dentro dela, a pasta `workflows`; nela,  crie o arquivo `ci-cd.yml`, com o conteúdo:
@@ -166,7 +166,7 @@ git push
 
 ## Etapa 3 – Repositório Git com os manifests do ArgoCD 
 
-### Passo 1
+#### Passo 1
 
 1. No VSCode, crie uma pasta chamada `deploy` e dentro dela, crie o arquivo `deployment.yaml`, com o conteúdo:
 ```
@@ -209,7 +209,7 @@ spec:
   type: ClusterIP
 ```
 
-### Passo 2
+#### Passo 2
 
 1. No terminal, suba os manifestos para o GitHub.
 ```
@@ -221,7 +221,7 @@ git push
 
 Etapa 4 – Criar o App no ArgoCD
 
-### Passo 1
+#### Passo 1
 
 1. No terminal, inicie o Minikube.
 ```
@@ -234,7 +234,7 @@ minikube status
 kubectl get pods -A
 ```
 
-### Passo 2
+#### Passo 2
 
 1. Instale o ArgoCD no Minekube, caso ainda não tenha.
 ```
