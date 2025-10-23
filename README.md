@@ -62,7 +62,7 @@ async def root():
     return {"message": "Hello World"}
 ```
 
-2. Teste localmente:
+2. Teste localmente, acessando no terminal:
 ```
 uvicorn main:app --host 0.0.0.0 --port 8080
 ```
