@@ -247,7 +247,12 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 
+
 3. Acesse o ArgoCD pelo navegador https://localhost:8080.
 
 4. Faça o login, usando como usuário `admin` e senha.
   * Caso não saiba a senha, abra outra janela e use o comando `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | % { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }`
+
+#### Passo 3
+
+1. Após entrar no ArgoCD, clique em "New App" e preencha os campos.
