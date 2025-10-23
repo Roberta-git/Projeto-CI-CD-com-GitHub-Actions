@@ -271,7 +271,7 @@ git push
 
 1. No terminal, inicie o Minikube.
 ```
-miekube start
+minikube start
 ```
 
 2. Verifique se os pods então em "Running".
