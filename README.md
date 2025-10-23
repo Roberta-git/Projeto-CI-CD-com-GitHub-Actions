@@ -295,7 +295,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 * Namespace: default
 
 
-<img src=""  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/1709afe2-8d43-473b-b523-304835b0f151"  alt="" width="700"/>
 </p>
 
 
