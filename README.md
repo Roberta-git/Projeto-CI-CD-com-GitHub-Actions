@@ -79,7 +79,7 @@ uvicorn main:app --host 0.0.0.0 --port 8080
   curl http://localhost:8080
   ```
 
-  <img src=""  alt="" width="700"/>
+  <img src="https://github.com/user-attachments/assets/ba784636-27d7-4abe-8589-08792e4ce9f8"  alt="" width="700"/>
 </p>
 
 #### Passo 4
@@ -339,6 +339,18 @@ git push
 
 <img src="https://github.com/user-attachments/assets/7ab62194-ce9f-4894-988a-5bceeb5d2467"  alt="" width="700"/>
 </p>
+
+
+  * Teste no terminal, via curl.
+  ```
+  curl http://localhost:8081
+  ```
+
+  <img src=""  alt="" width="700"/>
+</p>
+
+  
+   
 
 
 ## Conclusão
