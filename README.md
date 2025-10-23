@@ -62,12 +62,12 @@ async def root():
     return {"message": "Hello World"}
 ```
 
-2. Teste localmente, com o comando:
+2. Teste localmente:
 ```
 uvicorn main:app --host 0.0.0.0 --port 8080
 ```
 
-3. Abra o navegador  http://localhost:8080 e verifique se aparece a mensagem `{"message": "Hello World"}`.
+ * Abra o navegador  http://localhost:8080 e verifique se aparece a mensagem `{"message": "Hello World"}`.
 
 <img src=""  alt="" width="700"/>
 </p>
