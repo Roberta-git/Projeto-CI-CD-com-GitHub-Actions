@@ -177,7 +177,7 @@ git push
 6. Verifique, no repositório do GitHub, na aba `Actions`, se o workflow aparece verde, sinal de que tudo foi criado com sucesso.
 
 
-<img src=""  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/2c38bceb-d70f-4e8e-ba13-64b65c934b0d"  alt="" width="700"/>
 </p>
 
 
