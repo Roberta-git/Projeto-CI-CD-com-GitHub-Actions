@@ -277,7 +277,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
   * Caso não saiba a senha, abra outra janela e use o comando `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | % { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }`
 
 
-<img src=""  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/1e54fe17-c0ab-4dd9-ae42-d37612e3c9be"  alt="" width="700"/>
 </p>
 
 
