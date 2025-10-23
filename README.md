@@ -69,7 +69,7 @@ uvicorn main:app --host 0.0.0.0 --port 8080
 
  * Abra o navegador  http://localhost:8080 e verifique se aparece a mensagem `{"message": "Hello World"}`.
 
-<img src=""  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/2c623e10-5b2f-4f73-8e25-2f97128c3fde"  alt="" width="700"/>
 </p>
 
 
