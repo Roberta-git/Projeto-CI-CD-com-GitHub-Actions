@@ -308,7 +308,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 5. Ao aparecer saudável, a aplicação terá sido criada com sucesso.
 
 
-<img src=""  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/9238c2c4-4860-4680-bbb4-29c7120b5760"  alt="" width="700"/>
 </p>
 
 
