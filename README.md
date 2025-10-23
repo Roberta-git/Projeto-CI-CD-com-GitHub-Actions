@@ -252,7 +252,7 @@ minikube status
 kubectl get pods -A
 ```
 
-<img src=""  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/b25f067e-ce5a-4dad-beee-e4d1efb70135"  alt="" width="700"/>
 </p>
 
 
