@@ -35,7 +35,7 @@ cd hello-app
 
 #### Passo 2
 
-1. Dentro da pasta `hello-app`, no VSCode, crie um ambiente e instale o FastAPI e o Uvicorn para a aplicação.
+1. Dentro da pasta `hello-app`, no VS Code, crie um ambiente e instale o FastAPI e o Uvicorn para a aplicação.
 
 ```
 python3 -m venv venv
@@ -44,7 +44,7 @@ venv\Scripts\activate     # para Windows
 pip install fastapi uvicorn
 ```
 
-2. Crie o arquivo `requirements.txt``para registrar as dependências dos pacotes de Python.
+2. Crie o arquivo `requirements.txt` para registrar as dependências dos pacotes de Python.
 ```
 pip freeze > requirements.txt
 ```
@@ -68,6 +68,9 @@ uvicorn main:app --host 0.0.0.0 --port 8080
 ```
 
 3. Abra o navegador  http://localhost:8080 e verifique se aparece a mensagem `{"message": "Hello World"}`.
+
+<img src=""  alt="" width="700"/>
+</p>
 
 
 #### Passo 4
