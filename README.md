@@ -109,7 +109,7 @@ docker build -t hello-app:latest .
 ```
   * Verifique no Docker Hub se a imagem foi construída e enviada, para isso, acesse  https://hub.docker.com/, entre na sua conta, cleque em repositórios e veja o seu repositório respectivo a imagem.
 
- <img src=""  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/c4dd3b40-f236-444b-982e-f8aecc0572b3"  alt="" width="700"/>
 </p>
 
 
