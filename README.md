@@ -346,7 +346,7 @@ git push
   curl http://localhost:8081
   ```
 
-  <img src=""  alt="" width="700"/>
+  <img src="https://github.com/user-attachments/assets/129602e4-d63b-4eaf-bad9-43bccd2fdd18"  alt="" width="700"/>
 </p>
 
   
