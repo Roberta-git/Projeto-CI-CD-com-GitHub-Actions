@@ -255,4 +255,43 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 #### Passo 3
 
-1. Após entrar no ArgoCD, clique em "New App" e preencha os campos.
+1. Após entrar no ArgoCD, clique em "New App" e preencha os campos:
+
+* Application Name: hello-app
+* Project: default
+* Sync Policy: "Manual" 
+* Repository URL: link HTTPS do repositório que você criou no GitHub
+* Revision: main
+* Path: k8s
+* Cluster URL: https://kubernetes.default.svc
+* Namespace: default
+
+
+2. Clique em `Create`.
+
+3. Depois da aplicação criada, clique em `Sync`, para sincronizar os manifestos.
+
+4. Espera-se que ao sincronizar,  a aplicação apareça com o status de saudável e com a cor verde.
+
+5. Ao aparecer saudável, a aplicação terá sido criada com sucesso.
+
+
+## Alterando a mensagem dentro do código de python
+
+1. Para alterar a mansagem do `main.py`, basta ir até o arquivo criado no VS Code e alterar a mensagem para qualquer outra. No meu caso, foi alterado de "Hello world" para "Olá, instrutores!".
+
+2. Após a alteração, abra o terminal e faça add, commit e push do arquivo modificado.
+
+```
+git add main.py
+git commit -m "feat: altera mensagem da API para Olá, instrutores!"
+git push
+```
+
+3. Abra o navegador http://localhost:8081 e verifique se a mensagem realmente foi alterada.
+
+
+
+##Conclusão
+
+Com a relização do projeto, foi possível aprimorar os conceitos a cerca de Kubernetes e assuntos relacionados, além de aprender sobre automatização de pipeline com GitHub Actions.
