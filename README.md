@@ -328,10 +328,10 @@ git push
 3. Abra o navegador http://localhost:8081 e verifique se a mensagem realmente foi alterada.
 
 
-<img src="https://github.com/user-attachments/assets/c55ed0b6-3b6f-4b95-863a-16dd06aa8d31"  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/7ab62194-ce9f-4894-988a-5bceeb5d2467"  alt="" width="700"/>
 </p>
 
 
-##Conclusão
+## Conclusão
 
 Com a relização do projeto, foi possível aprimorar os conceitos a cerca de Kubernetes e assuntos relacionados, além de aprender sobre automatização de pipeline com GitHub Actions.
