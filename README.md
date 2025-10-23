@@ -107,7 +107,13 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
 ```
 docker build -t hello-app:latest .
 ```
+  * Verifique no Docker Hub se a imagem foi construída e enviada, para isso, acesse  https://hub.docker.com/, entre na sua conta, cleque em repositórios e veja o seu repositório respectivo a imagem.
 
+ <img src=""  alt="" width="700"/>
+</p>
+
+
+  
 3. Teste a  aplicação localmente.
 ```
 docker run -p 8080:8080 hello-app:latest
