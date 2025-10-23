@@ -12,6 +12,16 @@ execução de uma aplicação FastAPI, usando o GitHub Actions e outros serviço
 
 
 
+
+## Código da aplicação FastAPI
+
+O repositório com o código-fonte da aplicação, Dockerfile e workflow do GitHub Actions está disponível aqui:
+
+[Acesse o repositório hello-app no GitHub](https://github.com/Roberta-git/hello-app)
+
+
+
+
 ## Etapa 1: Criar aplicação FastAPI
 
 #### Passo 1
