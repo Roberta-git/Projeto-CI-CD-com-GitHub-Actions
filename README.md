@@ -276,6 +276,11 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 4. Faça o login, usando como usuário `admin` e senha.
   * Caso não saiba a senha, abra outra janela e use o comando `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | % { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }`
 
+
+<img src=""  alt="" width="700"/>
+</p>
+
+
 #### Passo 3
 
 1. Após entrar no ArgoCD, clique em "New App" e preencha os campos:
@@ -290,6 +295,10 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 * Namespace: default
 
 
+<img src=""  alt="" width="700"/>
+</p>
+
+
 2. Clique em `Create`.
 
 3. Depois da aplicação criada, clique em `Sync`, para sincronizar os manifestos.
@@ -297,6 +306,11 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 4. Espera-se que ao sincronizar,  a aplicação apareça com o status de saudável e com a cor verde.
 
 5. Ao aparecer saudável, a aplicação terá sido criada com sucesso.
+
+
+<img src=""  alt="" width="700"/>
+</p>
+
 
 
 ## Alterando a mensagem dentro do código de python
@@ -313,6 +327,9 @@ git push
 
 3. Abra o navegador http://localhost:8081 e verifique se a mensagem realmente foi alterada.
 
+
+<img src=""  alt="" width="700"/>
+</p>
 
 
 ##Conclusão
