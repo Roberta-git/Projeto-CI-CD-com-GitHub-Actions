@@ -4,6 +4,19 @@
 execução de uma aplicação FastAPI, usando o GitHub Actions e outros serviços.
 
 
+## Sumário
+
+- [Ferramentas utilizadas](#ferramentas-utilizadas)
+- [Código da aplicação FastAPI](#código-da-aplicação-fastapi)
+- [Etapa 1: Criar aplicação FastAPI](#etapa-1-criar-aplicação-fastapi)
+- [Etapa 2: Criar o GitHub Actions (CI/CD)](#etapa-2--criar-o-github-actions-cicd)
+- [Etapa 3: Repositório Git com os manifests do ArgoCD](#etapa-3--repositório-git-com-os-manifests-do-argocd)
+- [Etapa 4: Criar o App no ArgoCD](#etapa-4--criar-o-app-no-argocd)
+- [Alterando a mensagem da aplicação](#alterando-a-mensagem-dentro-do-código-de-python)
+- [Conclusão](#conclusão)
+
+
+
 ### Ferramentas utilizadas 
 * Python 3 e Docker
 * Minikube, Kind ou Rancher
