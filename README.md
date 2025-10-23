@@ -252,6 +252,11 @@ minikube status
 kubectl get pods -A
 ```
 
+<img src=""  alt="" width="700"/>
+</p>
+
+
+
 #### Passo 2
 
 1. Instale o ArgoCD no Minekube, caso ainda não tenha.
