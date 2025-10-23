@@ -265,7 +265,7 @@ git push
 ```
 
 
-Etapa 4 – Criar o App no ArgoCD
+## Etapa 4 – Criar o App no ArgoCD
 
 #### Passo 1
 
