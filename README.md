@@ -73,6 +73,15 @@ uvicorn main:app --host 0.0.0.0 --port 8080
 </p>
 
 
+
+  * Teste no terminal via curl.
+  ```
+  curl http://localhost:8080
+  ```
+
+  <img src=""  alt="" width="700"/>
+</p>
+
 #### Passo 4
 
 1. Para conteinerizar a aplicação, será preciso criar uma imagem Docker. Para isso, crie um arquivo chamado `Dockerfile` e inclua nele:
