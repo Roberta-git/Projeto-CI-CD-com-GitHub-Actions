@@ -328,7 +328,7 @@ git push
 3. Abra o navegador http://localhost:8081 e verifique se a mensagem realmente foi alterada.
 
 
-<img src=""  alt="" width="700"/>
+<img src="https://github.com/user-attachments/assets/c55ed0b6-3b6f-4b95-863a-16dd06aa8d31"  alt="" width="700"/>
 </p>
 
 
