@@ -177,6 +177,11 @@ git push
 6. Verifique, no repositório do GitHub, na aba `Actions`, se o workflow aparece verde, sinal de que tudo foi criado com sucesso.
 
 
+<img src=""  alt="" width="700"/>
+</p>
+
+
+
 ## Etapa 3 – Repositório Git com os manifests do ArgoCD 
 
 #### Passo 1
