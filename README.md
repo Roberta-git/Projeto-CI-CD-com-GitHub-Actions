@@ -223,7 +223,7 @@ ssh -T github-manifest
 ```
  * Deve aparecer que as autenticações foram feitas com sucesso.
 
- <img src=""  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/985ef1bf-2851-469b-aa6d-3c4cf98b2678"  alt="" width="700"/>
 </p>
 
 
