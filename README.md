@@ -154,7 +154,83 @@ Confira no GITHUb, se os arquivos pareceram.
 
 ## Etapa 2 – Criar o GitHub Actions (CI/CD) 
 
+
 #### Passo 1
+
+1. Para elevar a segurança do projeto e separar os acessos, utilizaremos chaves SSH, uma para o repositório de aplicação e uma para o de manifests.
+
+2. No terminal do computador execute para a primeira chave app:
+```
+ssh-keygen -t rsa -b 4096 -C "app@teste"
+```
+  * Quando pedir o caminho para salvar, digite `C:\Users\coloqueSeuUsuario\.ssh\id_rsa_app`.
+  * Quando pedir senha, apenas aperte enter, e enter novamente para confirmar.
+
+3. Ainda no terminal, execute para a segunda chave manifest:
+```
+C:\Users\coloqueSeuUsuario\.ssh\id_rsa_app
+```
+   * Quando pdir o caminho para salvar, digite `ssh-keygen -t rsa -b 4096 -C "manifest@teste"`.
+   * Quando pedir a senha, aperte enter, e enter novamente para confirmar.
+
+4. Após o processo anterior, no terminal rode ```type C:\Users\IASMYN\.ssh\id_rsa_app.pub ``` e depois ```type C:\Users\IASMYN\.ssh\id_rsa_manifest.pub``` e copie os textos que apareceram.
+
+5. No GitHub, entre na sua conta, clique no seu perfil, `Settings` e `SSH and GPG keys`. Clique em `New SSH key`:
+  * Para o app:
+    * Título: app
+    * Na caixa, cole o primerio texto que você copiou (do app@teste).
+
+  * Para os manifests:
+    * Título: manifest
+    * Na caixa, cole o segundo texto que você copiou (manifest@teste).
+   
+6. Para criar o arquio `config` do SSH, no Windowa Explorer, acesse `C:\Users\seuusuárioaqui\.ssh`, clique com o botão direito em um espaço vazio e escolha `Novo` e depois `Documento de Texto`.
+   * Renomeie o arquivo para `config`, sem exteção alguma, não pode aparerer (txt).
+
+7. No VS Code, abra esse arquivo em `File > Opern File` e procure o arquivo `config` criado.
+
+8. Dentro do arquivo, cole o conteúdo:
+```
+Host github-app
+    HostName github.com
+    User git
+    IdentityFile C:/Users/seuusuárioaqui/.ssh/id_rsa_app
+
+Host github-manifest
+    HostName github.com
+    User git
+    IdentityFile C:/Users/seuusuárioaqui/.ssh/id_rsa_manifest
+```
+
+9. Salve.
+
+10. Para adicionar o remotes no projeto.
+
+11. Abra o terminal no diretório do repositório do app. Adicione o remote usando o host personalizado:
+```
+git remote add origin git@github-app:coloqueSeuUsuario/hello-app.git
+```
+
+  * Faça o mesmo processo com o `manifests`. Abra o diretório dos manifests e adicione o remote:
+  ```
+  git remote set-url argocd git@github-manifest:coloqueSeuUsuario/hello-app-manifests.git
+  ```
+
+12. Teste a conexão SSH, usando os comandos:
+```
+ssh -T github-app
+ssh -T github-manifest
+```
+ * Deve aparecer que as autenticações foram feitas com sucesso.
+
+
+13. Envie as alterações para o Git.
+```
+git push origin main       # para o app
+git push argocd main       # para os manifests
+```
+
+#### Passo 2
 
 1. Crie o workflow do GitHub Actions.
 2. No VSCode, na raiz de `hello-app`, gere a pasta  `.github ` e dentro dela, a pasta `workflows`; nela,  crie o arquivo `ci-cd.yml`, com o conteúdo:
@@ -207,6 +283,7 @@ git push
 
 <img src="https://github.com/user-attachments/assets/2c38bceb-d70f-4e8e-ba13-64b65c934b0d"  alt="" width="700"/>
 </p>
+
 
 
 
