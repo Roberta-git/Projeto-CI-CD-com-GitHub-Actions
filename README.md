@@ -120,7 +120,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
 ```
 docker build -t hello-app:latest .
 ```
-  * Verifique no Docker Hub se a imagem foi construída e enviada, para isso, acesse  https://hub.docker.com/, entre na sua conta, cleque em repositórios e veja o seu repositório respectivo a imagem.
+  * Verifique no Docker Hub se a imagem foi construída e enviada, para isso, acesse  https://hub.docker.com/, entre na sua conta, clique em repositórios e veja no seu repositório respectivo a imagem.
 
  <img src="https://github.com/user-attachments/assets/c4dd3b40-f236-444b-982e-f8aecc0572b3"  alt="" width="700"/>
 </p>
@@ -132,9 +132,9 @@ docker build -t hello-app:latest .
 docker run -p 8080:8080 hello-app:latest
 ```
 
-4. Acesse http://localhost:8080, no navegador e verifique se apareece a mensagem `Hello Word`.
+4. Acesse http://localhost:8080, no navegador e verifique se aparece a mensagem `Hello Word`.
 
-5. Se mensagem aparecer, volte ao terminal e faça o init e commit do arquivo.
+5. Se mensagem aparecer, volte ao terminal, inicialize o repositório Git e faça o commit do arquivo.
 ```
 git init
 git add .
@@ -142,14 +142,14 @@ git commit -m "feat: primeira versão da API FastAPI e Dockerfile"
 
 ```
 
-6. Conecte ao repostório remoto do GitHub por meio da URL para enviar os arquivos:
+6. Conecte-se ao repostório remoto do GitHub por meio da URL para enviar os arquivos:
 ```
 git remote add origin https://github.com/seu-usuario/hello-app.git
 git branch -M main
 git push -u origin main
 ```
 
-Confira no GITHUb, se os arquivos pareceram.
+Confira no GitHub, se os arquivos pareceram.
 
 
 ## Etapa 2 – Criar o GitHub Actions (CI/CD) 
@@ -173,7 +173,7 @@ C:\Users\coloqueSeuUsuario\.ssh\id_rsa_app
    * Quando pedir o caminho para salvar, digite `ssh-keygen -t rsa -b 4096 -C "manifest@teste"`.
    * Quando pedir a senha, aperte enter, e enter novamente para confirmar.
 
-4. Após o processo anterior, no terminal rode ```type C:\Users\IASMYN\.ssh\id_rsa_app.pub ``` e depois ```type C:\Users\IASMYN\.ssh\id_rsa_manifest.pub``` e copie os textos que apareceram.
+4. Após o processo anterior, no terminal rode ```type C:\Users\IASMYN\.ssh\id_rsa_app.pub ``` , depois ```type C:\Users\IASMYN\.ssh\id_rsa_manifest.pub``` e copie os textos que apareceram.
 
 5. No GitHub, entre na sua conta, clique no seu perfil, `Settings` e `SSH and GPG keys`. Clique em `New SSH key`:
   * Para o app:
@@ -184,10 +184,10 @@ C:\Users\coloqueSeuUsuario\.ssh\id_rsa_app
     * Título: manifest
     * Na caixa, cole o segundo texto que você copiou (manifest@teste).
    
-6. Para criar o arquio `config` do SSH, no Windowa Explorer, acesse `C:\Users\seuusuárioaqui\.ssh`, clique com o botão direito em um espaço vazio e escolha `Novo` e depois `Documento de Texto`.
+6. Para criar o arquio `config` do SSH, no Windows Explorer, acesse `C:\Users\seuusuárioaqui\.ssh`, clique com o botão direito em um espaço vazio e escolha `Novo` e depois `Documento de Texto`.
    * Renomeie o arquivo para `config`, sem exteção alguma, não pode aparerer (txt).
 
-7. No VS Code, abra esse arquivo em `File > Opern File` e procure o arquivo `config` criado.
+7. No VS Code, abra esse arquivo em `File > Open File` e procure o arquivo `config` criado.
 
 8. Dentro do arquivo, cole o conteúdo:
 ```
@@ -236,7 +236,7 @@ git push argocd main       # para os manifests
 #### Passo 2
 
 1. Crie o workflow do GitHub Actions.
-2. No VSCode, na raiz de `hello-app`, gere a pasta  `.github ` e dentro dela, a pasta `workflows`; nela,  crie o arquivo `ci-cd.yml`, com o conteúdo:
+2. No VS Code, na raiz de `hello-app`, gere a pasta  `.github ` e dentro dela, a pasta `workflows`; nela,  crie o arquivo `ci-cd.yml`, com o conteúdo:
 
 ```
 name: CI/CD
@@ -274,7 +274,7 @@ jobs:
  * Name: DOCKER_PASSWORD. Value: o token (se usar o token, dê a permissão de ready, write e delete) ou senha do Docker Hub.
 
 
-5. No terminal, rode o commit e push:
+5. No terminal, rode o add, commit e push:
 ```
 git add .github/workflows/ci-cd.yml
 git commit -m "ci: adiciona pipeline GitHub Actions para build e push Docker Hub"
@@ -294,7 +294,7 @@ git push
 
 #### Passo 1
 
-1. No VSCode, crie uma pasta chamada `deploy` e dentro dela, crie o arquivo `deployment.yaml`, com o conteúdo:
+1. No VS Code, crie uma pasta chamada `deploy` e dentro dela, crie o arquivo `deployment.yaml`, com o conteúdo:
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -367,7 +367,7 @@ kubectl get pods -A
 
 #### Passo 2
 
-1. Instale o ArgoCD no Minekube, caso ainda não tenha.
+1. Instale o ArgoCD no Minikube, caso ainda não tenha.
 ```
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
@@ -382,7 +382,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 3. Acesse o ArgoCD pelo navegador https://localhost:8080.
 
 4. Faça o login, usando como usuário `admin` e senha.
-  * Caso não saiba a senha, abra outra janela e use o comando `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | % { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }`
+  * Caso não saiba a senha, abra outra janela no terminal e use o comando `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | % { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }`
 
 
 <img src="https://github.com/user-attachments/assets/1e54fe17-c0ab-4dd9-ae42-d37612e3c9be"  alt="" width="700"/>
