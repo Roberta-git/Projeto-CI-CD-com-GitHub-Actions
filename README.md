@@ -223,6 +223,9 @@ ssh -T github-manifest
 ```
  * Deve aparecer que as autenticações foram feitas com sucesso.
 
+ <img src=""  alt="" width="700"/>
+</p>
+
 
 13. Envie as alterações para o Git.
 ```
