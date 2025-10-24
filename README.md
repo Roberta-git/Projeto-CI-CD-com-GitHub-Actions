@@ -170,7 +170,7 @@ ssh-keygen -t rsa -b 4096 -C "app@teste"
 ```
 C:\Users\coloqueSeuUsuario\.ssh\id_rsa_app
 ```
-   * Quando pdir o caminho para salvar, digite `ssh-keygen -t rsa -b 4096 -C "manifest@teste"`.
+   * Quando pedir o caminho para salvar, digite `ssh-keygen -t rsa -b 4096 -C "manifest@teste"`.
    * Quando pedir a senha, aperte enter, e enter novamente para confirmar.
 
 4. Após o processo anterior, no terminal rode ```type C:\Users\IASMYN\.ssh\id_rsa_app.pub ``` e depois ```type C:\Users\IASMYN\.ssh\id_rsa_manifest.pub``` e copie os textos que apareceram.
